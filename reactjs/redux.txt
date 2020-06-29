@@ -1,0 +1,126 @@
+->redux is a 3rd party state management library, which is totally independent of react , 
+can be used with other freamwork also
+
+->global storage of state which can be used anywhere in the app
+
+flow-->  component->action->reducers->store
+
+
+
+
+----->Actions
+
+->will pass type and the payload
+->payload is a object which contains value you send with action
+
+
+
+----->reducers
+
+The reducer is a pure function that takes the previous state and an action, 
+and returns the next state.
+
+->receive old state and action and gives output with new state
+
+->only pure function , synchronous code
+
+->no asychronous code , no http request
+
+->input in output out nothing in between
+
+->reducers is the only things which updates the states
+
+
+
+----->Stores
+
+->Centrally store all the state
+
+->tightly attached with reducers
+
+
+
+----->Subscribe
+
+->mapDispatchToProps  is used to dispatch method to action
+
+->mapStateToProps is used to get state value from store
+
+
+
+
+----->Provider
+
+->React Redux provides <Provider />, which makes the Redux store available to the rest of your app:
+
+
+
+
+
+
+----->combining local state with redux
+
+->we can have some local ui state in our component also rather then redux 
+eg. show/hide modal , input data handle
+
+
+->like in input field we have local state to store input data but on submit 
+we using redux to save it 
+
+
+-----> middleware
+
+added in index file with store
+
+
+
+----->Action type
+
+file used to define unique action type
+should be in All CAPS
+
+----->Action Creators
+
+action creator is just a function which return a action
+
+->action creator are used to perform asychronous code 
+
+
+->to access asychronous code we should have middleware, we require two methods or that
+
+1->its which has dispatch method which runs code and 2nd method 
+   which return type and load to reducers
+
+
+
+->we can acces current state by getState() in action creators , inspite we can pass
+  any data in payload from component in dispatch method
+
+
+->data logic can be placed in action creators or reducers ,both places are correct
+eg res * 2
+
+
+----->where to put the logic 
+
+depends on the scenario
+
+
+
+----->utility function
+
+
+----->redux thunk 
+
+it's a middleware which allow us to code asychronous code in action creators
+
+Redux Thunk middleware allows you to write action creators that return a function instead 
+of an action. The thunk can be used to delay the dispatch of an action, or 
+to dispatch only if a certain condition is met
+
+
+
+----->Api 
+
+->api are called in action creators with thunk
+->for intial data fetching have to call dispatch methid from componentDidMount  

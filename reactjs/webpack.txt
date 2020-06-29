@@ -1,0 +1,5 @@
+webpack is a bundler to optimize file into one 
+
+
+like all js in bundle.js
+all css in bundle.css

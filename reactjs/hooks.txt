@@ -1,0 +1,96 @@
+----->react hooks
+
+Functional component everywhere
+
+react hooks allowed to work only with functional component
+
+hooks replaces class only functionality , replace state management, replace lifecycle
+
+you can also write your hooks
+
+->react hooks are javascript function name like this
+    useXYZ() ->starting with 'use' in lowercase and function name in uppercase
+
+-> idea behind hooks is to expose certain stateful functionality to functional component
+
+->hooks are highly re-usable and independent for each component
+
+->hooks allow you to add state to functional component and to share
+ stateful logic across component
+
+->React hooks introduced with React 16.8 stable version and 
+can not be supported with earlier version
+
+
+
+
+----->useState()
+
+const [count,setcount]=useState(''); //syntax to use
+setcount(1); // count state updated to 1
+
+here 'count' is intial state and 
+'setcount' is a function to update count , 
+
+----->two hooks rule
+
+1.use in function component
+2.can not be used inside any other function inside functional component.
+  can be used only at root able of functional component  
+ can not be used inside any condition eg. if(){}  
+
+
+----->useEffect()
+
+->use to load data on component render
+
+->useEffect() act like componentDidUpdate and its run the function after 
+every component update(re-render)
+
+->with [] as secondary argument ,its act like componentDidMount :runs only once
+( after the first render)
+
+
+->'abcd' in -> [abcd] is its dependency ,which means useEffect will run when 'abcd' is changed  
+
+->cleanup function runs when component gots unmounted
+
+
+----->useRef()
+
+useRef returns a mutable ref object
+
+
+----->state batching
+
+->multiple state update together to avoid unneccesory render cycle
+
+submit=()=>{
+  setName('Max');
+  setAge(30); //
+
+}
+
+calling 2 or more state update function in same synchronous code inside a function makes this a
+state batching and will only re-render once.
+
+----->useReducer
+
+useReducer has no coneection to reducer library
+
+An alternative to useState. Accepts a reducer of type (state, action) => newState, and
+ returns the current state paired with a dispatch method.
+
+when working with useReducer(), react will re-render the component whenever your reducer
+returns the new state
+
+
+----->useContext()
+
+
+
+
+----->useMemo()
+
+
+----->useCallback()

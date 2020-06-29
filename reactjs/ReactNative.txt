@@ -1,0 +1,113 @@
+----->React native
+
+a collection of special react component
+
+component compiled to native widget
+
+native plateform APi exposed to javascript
+
+Written in JavaScript—rendered with native code ,connects javascript and native plateform code
+
+can create app for android and ios
+
+
+->normal html don't works here
+
+->views are compiled and are native view
+->javascript code/logic are not compiled
+
+
+
+->styleing is done via javascript here
+->react-native just offers css-like property name 
+
+->learn once write anywhere not write javascript code and run it anywhere
+
+
+---->Simulator
+
+Windows can only android Simulator 
+mac can run both (android and ios) Simulator
+
+
+
+
+----->style
+
+style/css here is javascript object
+all css in camelCase    
+
+-->inline style   //not ideal
+
+
+style={{padding:10}}
+
+
+-->stylesheet object // preferred
+
+creates a javascript object which include all css
+
+stylesheet adds validation and potential performance improvement
+
+
+should use flexboz styling 
+
+--------------------------------------------------------->tags
+
+<View>   // div
+
+<Text>  //text container , text without it will be an error
+
+<Button> // use like this <Button title=""/>   not like <Button></Button>
+
+
+marginVertical: 10 // css property only in react native
+
+<ScrollView>  // to provide page/section scroll when content increases
+
+
+<FlatList>  // component renders data as you scroll down and so on (optimizing code/performance)
+
+
+->react native support id instead of key also
+
+<Touchable> // to make element touchable just wrap your view inside it
+
+<TouchableOpacity> // provide visual effect of element opacity 
+                    we can control its opacity as
+                   <TouchableOpacity activeOpacity={0.8}> 
+
+<TouchableHighlight> // provide a highlight color around the element
+
+<TouchableNativeFeedback> // provides a ripple effect
+
+<TouchableWithoutFeedback> // no visual effect 
+
+<Modal visible={} animationType="slide"> //
+
+
+
+
+
+
+----->Debugging
+
+
+----->defining constant  
+primary color
+secondary color 
+
+<Input keyboardType="numeric"/> //to show numeric kwyboard only  
+
+
+---Alert
+can add text, button,event
+
+Alert.alert('invalid number','number has to be b/w 0-10',
+[{text:'okay'},style:'destructive',onpress:resetHandler]);
+
+----->switching screen
+same as react ,its without routing just return different component on click
+
+
+
